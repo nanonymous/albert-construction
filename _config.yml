@@ -1,0 +1,23 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Albert Construction
+contact_title: Альберт Смородников
+email: albert_77@mail.ru
+phone: +7 (921) 943 93 75
+description: > # this means to ignore newlines until "baseurl:"
+  Строительство чего-то там. Дома, пластиковые окна, коттеджи,
+  клубы, многоэтажки. Описание компании здесь.
+  Много строк можно писать.
+baseurl: "/albert-construction" # the subpath of your site, e.g. /blog
+url: "http://nanonymous.github.io/albert-construction/" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  nanonymous
+
+# Build settings
+markdown: kramdown

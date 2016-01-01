@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<article class="home">
+
+  <!-- http://kenwheeler.github.io/slick/ -->
+
+  <link rel="stylesheet" type="text/css" href="{{ "/js/slick/slick.css" | prepend: site.baseurl }}"/>
+
+  <!-- jQuery for plugins -->
+
+  <script type='text/javascript' src="{{ "/js/jquery-2.1.4.min.js" | prepend: site.baseurl }}"></script>
+
+  <script type="text/javascript" src="{{ "/js/slick/slick.min.js" | prepend: site.baseurl }}"></script>
+
+  <link rel="stylesheet" type="text/css" href="{{ "/js/slick/slick-theme.css" | prepend: site.baseurl }}"/>
+
+    <script>
+    $(document).ready(function(){
+      $('.slides').show().slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        // speed: 500,
+        // fade: true,
+        // cssEase: 'linear'
+      });
+    });
+  </script>
+        
+
+  <div class="slides" style="display: none">
+    <div class="slide">
+        <div class="image" style='background-image: url("{{ "/images/slides/1.jpg" | prepend: site.baseurl }}")'></div>
+        <p><a href="{{ "/projects" | prepend: site.baseurl }}"><em>Проект №1</em></a>. Небоскрёб. Ехал Грека через реку, видит Грека - в реке рак.</p>
+    </div>
+
+    <div class="slide">
+        <div class="image" style='background-image: url("{{ "/images/slides/2.jpg" | prepend: site.baseurl }}")'></div>
+        <p><a href="{{ "/projects" | prepend: site.baseurl }}"><em>Проект №2</em></a>. Дом. Ехал Грека через реку, видит Грека - в реке рак.</p>
+    </div>
+
+    <div class="slide">
+        <div class="image" style='background-image: url("{{ "/images/slides/3.jpg" | prepend: site.baseurl }}")'></div>
+        <p><a href="{{ "/projects" | prepend: site.baseurl }}"><em>Проект №3</em></a>. Что-то.</p>
+    </div>
+
+    <div class="slide">
+        <div class="image" style='background-image: url("{{ "/images/slides/4.jpg" | prepend: site.baseurl }}")'></div>
+        <p><a href="{{ "/projects" | prepend: site.baseurl }}"><em>Проект №4</em></a>. Деревянный.</p>
+    </div>
+  </div>
+
+  <!-- <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul> -->
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+  <div class="wrapper">
+    <p>
+      Группа «Строительная Компания Альберт» — российский энергетический холдинг, осуществляющий свою деятельность на территории Алтайского края, Кемеровской области, Красноярского края, Республики Хакасия.
+      </p>
+
+    <p>
+      Одна из крупнейших генерирующих компаний в России по установленной мощности и первая в Сибири по тепловой мощности. На долю станций СГК приходится порядка 20-22 % выработки тепла и электроэнергии энергосистемы Сибири.
+    </p>
+
+    <p>
+      Полное наименование — Общество с ограниченной ответственностью «Сибирская генерирующая компания», сокращенное — ООО «СГК».
+    </p>
+
+    <p>
+      Головной офис компания находится в Москве. Владельцем компании через кипрскую Siberian Energy Investments Ltd является основной акционер СУЭК Андрей Мельниченко.
+    </p>
+
+  </div>
+</article>

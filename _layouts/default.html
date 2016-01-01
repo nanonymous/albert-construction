@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="mobile-menu">
+      {% include header.html %}
+    </div>
+
+    <main class="content-wrapper">
+      {% include header.html desktop=true %}
+
+      <!-- <button class="toggle-button">☰</button> -->
+      <div class="toggle-button slideout-menu-button">
+        <div class="border-menu"></div>
+      </div>
+
+      <div class="page-content">
+        {{ content }}
+      </div>
+
+      {% include footer.html %}
+    </main>
+
+    <!-- slideout mobile menu button -->
+    <!-- https://github.com/Mango/slideout -->
+
+    <script type='text/javascript' src="{{ "/js/slideout.min.js" | prepend: site.baseurl }}"></script>
+
+    <script>
+      var slideout = new Slideout
+      ({
+        'panel': document.querySelector('.content-wrapper'),
+        'menu': document.querySelector('.mobile-menu'),
+        'padding': 170, // это значение должно равняться width у .slideout-menu
+        'tolerance': 70
+      })
+
+      // Toggle button
+      document.querySelector('.toggle-button').addEventListener('click', function()
+      {
+        slideout.toggle()
+      })
+
+      document.querySelector('.mobile-menu').addEventListener('click', function(event)
+      {
+        if (event.target.nodeName === 'A')
+        {
+          slideout.close()
+        }
+      })
+    </script>
+  </body>
+
+</html>

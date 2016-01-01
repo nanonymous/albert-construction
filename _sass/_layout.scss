@@ -1,0 +1,585 @@
+/**
+ * Site header
+ */
+.site-header {
+
+    padding-top: 1em;
+
+    text-align: center;
+
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #cfcfcf;
+
+    // border-top: 5px solid $grey-color-dark;
+    // border-bottom: 1px solid $grey-color-light;
+    // min-height: 56px;
+
+    // // Positioning context for the mobile navigation icon
+    // position: relative;
+}
+
+.site-title {
+    margin-right: 3em;
+    font-size: 26px;
+
+    // font-weight: 300;
+    // line-height: 56px;
+    // letter-spacing: -1px;
+    // margin-bottom: 0;
+    // float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+.site-nav {
+    display: inline-block;
+
+    // float: right;
+    // line-height: 56px;
+
+    ul {
+        display: inline-block;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        display: inline-block;
+
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child) {
+            margin-right: 2em;
+        }
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+    }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.footer-heading {
+    font-size: 1em;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 0.8em;
+    color: $grey-color;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(1% - (#{$spacing-unit} / 2));
+    width:         calc(1% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(63% - (#{$spacing-unit} / 2));
+    width:         calc(63% - (#{$spacing-unit} / 2));
+}
+
+// @include media-query($on-laptop) {
+//     .footer-col-1,
+//     .footer-col-2 {
+//         width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+//         width:         calc(50% - (#{$spacing-unit} / 2));
+//     }
+
+//     .footer-col-3 {
+//         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+//         width:         calc(100% - (#{$spacing-unit} / 2));
+//     }
+// }
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+
+
+/**
+ * Page content
+ */
+article {
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+
+    img {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+article.wrapper {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 2em;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.post-content {
+    // margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 2em;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 1.7em;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 1.4em;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+// https://github.com/Mango/slideout
+
+.slideout-menu-button {
+    display: none;
+}
+
+.wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+article.home {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    margin-top: -1px; // border
+    margin-bottom: 0;
+
+    .wrapper {
+        margin-top: 5em;
+        margin-bottom: 3em;
+    }
+}
+
+.slide .image {
+    border-top: 1px solid #afafaf;
+    border-bottom: 1px solid #afafaf;
+    background-color: #efefef;
+}
+
+.slide {
+    outline: none;
+    position: relative;
+
+    .image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        height: 16em;
+    }
+
+    p {
+        position: absolute;
+        bottom: 0;
+
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+
+        padding-top: 0.5em;
+        padding-bottom: 0.4em;
+
+        padding-left: 0.8em;
+        padding-right: 0.8em;     
+
+        margin: 0;
+
+        width: 100%;
+
+        a {
+            color: white;
+        }
+
+        // margin-top: 0.5em;
+        // margin-bottom: 0.2em;
+
+        // margin-left: 0.8em;
+        // margin-right: 0.8em;
+
+        // font-size: 1.25em;
+
+        em {
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+}
+
+.slides .slick-dots {
+    bottom: -2em;
+
+    margin: 0;
+
+    button:before {
+        font-size: 12px;
+        // color: white;
+        // opacity: 1;
+    }
+}
+
+#contact-map {
+    margin-top: 1.5em;
+    height: 20em;
+    border: 1px solid #afafaf;
+    background: #efefef;
+}
+
+// layout for mobile
+
+@include media-query($on-palm) {
+
+    body {
+        font-size: 16px;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .mobile-menu {
+        .site-header {
+            margin: 0;
+        }
+
+        ul {
+            padding-top: 0.6em;
+        }
+
+        li {
+            width: 100%;
+            margin: 0 !important;
+
+            &:active {
+                background-color: #5f5f5f;
+            }
+        }
+
+        a {
+            display: block;
+
+            padding-left: 1.2em;
+            padding-right: 1.2em;
+
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .site-header {
+            border: 0;
+        }
+    }
+
+    .slideout-menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+
+      // this should be equal to "padding" option in javascript code
+      width: 170px;
+
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      display: none;
+    }
+
+    .slideout-panel {
+      position:relative;
+      z-index: 1;
+      will-change: transform;
+    }
+
+    .slideout-open,
+    .slideout-open body,
+    .slideout-open .slideout-panel {
+      overflow: hidden;
+    }
+
+    .slideout-open .slideout-menu {
+      display: block;
+    }
+
+    .slideout-menu-button {
+        display: inline-block;
+
+        width: 1em;
+        height: 1em;
+
+        padding-left: 0.4em;
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        padding-right: 0.4em;
+    }
+
+    .content-wrapper {
+        background: white;
+    }
+
+    .slideout-open .slideout-menu {
+        display: block !important;
+        background: #3f3f3f;
+        
+        a {
+            color: white;
+        }
+
+        .site-nav {
+            float: none;
+        }
+    }
+
+    .border-menu {
+      position: relative;
+      padding-left: 1.25em;
+    }
+
+    .border-menu:before {
+      content: "";
+      position: absolute;
+      top: 0.25em;
+      left: 0;
+      width: 1em;
+      height: 0.125em;
+      border-top: 0.375em double #000;
+      border-bottom: 0.125em solid #000;
+    }
+
+    .site-header {
+        padding: 0;
+
+        text-align: left;
+
+        ul {
+            margin: 0;
+        }
+
+        .site-title {
+            display: none;
+        }
+    }
+
+    .slideout-menu-button {
+        position: absolute;
+        left: 0.6em;
+        top: 0.6em;
+    }
+
+    .site-header-desktop {
+        margin-top: 0;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+
+        text-align: center;
+
+        ul {
+            display: none;
+        }
+
+        .site-title {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+
+    article {
+        img {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    article.wrapper {
+        margin-top: 1.6em;
+        margin-bottom: 1.6em;
+    }
+
+    article.home {
+        .wrapper {
+            margin-top: 3em;
+            margin-bottom: 1.6em;
+        }
+    }
+
+    .post-title {
+        font-size: 1.8em;
+    }
+
+    .post-header, .post-title {
+        margin-bottom: 0.6em;
+    }
+
+    .slides .slick-dots {
+        button:before {
+            font-size: 10px;
+        }
+    }
+}
+
+// zoom
+// https://github.com/ROUND/enhance.js
+
+.crop-cover     {object-fit: cover}
+.crop-contain   {object-fit: contain}
+.crop-scale     {object-fit: scale-down}
+.crop-none      {object-fit: none}
+
+.anchor-top-left        {object-position: top left}
+.anchor-top-center      {object-position: top center}
+.anchor-top-right       {object-position: top right}
+.anchor-center-left     {object-position: center left}
+.anchor-center-center   {object-position: center}
+.anchor-center-right    {object-position: center right}
+.anchor-bottom-left     {object-position: bottom left}
+.anchor-bottom-center   {object-position: bottom center}
+.anchor-bottom-right    {object-position: bottom right}
+
+img[data-action="zoom"] {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+}
+
+.zoom-img,
+.zoom-img-wrap {
+  position: relative;
+  z-index: 666;
+}
+
+img.zoom-img {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+}
+
+.zoom-overlay {
+  z-index: 420;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.zoom-overlay-open,
+.zoom-overlay-transitioning {
+  cursor: default;
+}
+
+.zoom-overlay-open .zoom-overlay {
+  opacity: 1;
+}
+
+// zoom ends
