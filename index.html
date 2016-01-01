@@ -17,8 +17,10 @@ layout: default
   <link rel="stylesheet" type="text/css" href="{{ "/js/slick/slick-theme.css" | prepend: site.baseurl }}"/>
 
     <script>
-    $(document).ready(function(){
-      $('.slides').show().slick({
+    $(document).ready(function()
+    {
+      $('.slides').show().slick
+      ({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -29,10 +31,15 @@ layout: default
         // speed: 500,
         // fade: true,
         // cssEase: 'linear'
-      });
-    });
+      })
+
+      // prevent slideout menu capturing moving touches when touched Slick carousel
+      $('.slick-list').on(window.navigator.msPointerEnabled ? 'MSPointerMove' : 'touchmove', function(event)
+      {
+        event.stopPropagation()
+      })
+    })
   </script>
-        
 
   <div class="slides" style="display: none">
     <div class="slide">
@@ -88,6 +95,5 @@ layout: default
     <p>
       Головной офис компания находится в Москве. Владельцем компании через кипрскую Siberian Energy Investments Ltd является основной акционер СУЭК Андрей Мельниченко.
     </p>
-
   </div>
 </article>
