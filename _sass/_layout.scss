@@ -32,6 +32,10 @@
     &:visited {
         color: $grey-color-dark;
     }
+
+    &:hover, &:active {
+        text-decoration: none;
+    }
 }
 
 .site-nav {
@@ -54,6 +58,12 @@
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
             margin-right: 2em;
+        }
+    }
+
+    a {
+        &:hover, &:active {
+            text-decoration: none;
         }
     }
 
@@ -366,7 +376,7 @@ article.home {
             padding-top: 0.6em;
             padding-bottom: 0.6em;
 
-            &:hover {
+            &:hover, &:active {
                 text-decoration: none;
             }
         }
