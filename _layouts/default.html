@@ -9,7 +9,7 @@
       {% include header.html %}
     </div>
 
-    <main class="content-wrapper">
+    <main class="website-content-wrapper">
       {% include header.html desktop=true %}
 
       <!-- <button class="toggle-button">☰</button> -->
@@ -32,7 +32,7 @@
     <script>
       var slideout = new Slideout
       ({
-        'panel': document.querySelector('.content-wrapper'),
+        'panel': document.querySelector('.website-content-wrapper'),
         'menu': document.querySelector('.mobile-menu'),
         'padding': 170, // это значение должно равняться width у .slideout-menu
         'tolerance': 70
