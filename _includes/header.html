@@ -5,6 +5,10 @@
   <nav class="site-nav">
 
     <ul>
+      {% if include.desktop != true %}
+        <li><a class="page-link" href="{{ site.baseurl }}"><b>Albert Construction</b></a></li>
+      {% endif %}
+
       {% assign sorted_pages = site.pages | sort:"order" %}
       {% for my_page in sorted_pages %}
         {% if my_page.title %}

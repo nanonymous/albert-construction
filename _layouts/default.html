@@ -29,12 +29,18 @@
 
     <script type='text/javascript' src="{{ "/js/slideout.min.js" | prepend: site.baseurl }}"></script>
 
+    <!--<style>
+      .slideout-menu {
+        width: xxx;
+      }
+    </style>-->
+
     <script>
       var slideout = new Slideout
       ({
         'panel': document.querySelector('.website-content-wrapper'),
         'menu': document.querySelector('.mobile-menu'),
-        'padding': 110, // это значение должно равняться width у .slideout-menu
+        'padding': 196, // это значение должно равняться width у .slideout-menu
         'tolerance': 70
       })
 
@@ -52,10 +58,6 @@
         }
       })
     </script>
-
-    <!-- Google Material Icons font -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
   </body>
 
 </html>
