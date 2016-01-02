@@ -27,6 +27,8 @@ p {
     margin-right: 3em;
     font-size: 26px;
 
+    font-weight: bold;
+
     // font-weight: 300;
     // line-height: 56px;
     // letter-spacing: -1px;
@@ -377,6 +379,18 @@ article.home {
     background: #efefef;
 }
 
+a, a:hover, a:visited {
+    color: #0091C2;
+}
+.contacts {
+    .material-icons {
+        vertical-align: bottom;
+        margin-bottom: 0.15em;
+        // opacity: 0.7;
+        color: #0099CC;
+    }
+}
+
 // layout for mobile
 
 @include media-query($on-palm) {
@@ -473,6 +487,7 @@ article.home {
 
     .website-content-wrapper {
         background: white;
+        box-shadow: 0 0 15px rgba(0,0,0,0.7);
     }
 
     .slideout-open .slideout-menu {
@@ -586,6 +601,13 @@ article.home {
             width: calc(100% - 1em);
         }
     }
+
+    .contacts {
+        .material-icons {
+            margin-bottom: 0.1em;
+            font-size: 1.4em;
+        }
+    }
 }
 
 // zoom
@@ -647,3 +669,26 @@ img.zoom-img {
 }
 
 // zoom ends
+
+.address-icon {
+    line-height: 35px;
+    background: url("../images/icons/map_marker.png") left center no-repeat;
+    padding-left: 45px;
+    display: inline-block;
+}
+
+.email-icon {
+    display: inline-block;
+    width: 30px;
+    height: 21px;
+    margin-top: 13px;
+    background: url(../images/layout/email_icon_banner.png) no-repeat;
+}
+
+.phone-icon {
+    display: inline-block;
+    width: 29px;
+    height: 26px;
+    margin-top: 6px;
+    background: url(../images/layout/phone_icon_banner.png) no-repeat;
+}

@@ -1,23 +1,22 @@
 ---
 layout: page
-title: Связаться с нами
+title: Контакты
 permalink: /contact/
 order: 3
 ---
 
-<p>
-    {{ site.contact_title }}<br/>
-	главный специалист<br/>
+<p class="contacts">
+    <i class="material-icons">person</i> {{ site.contact_title }}<br/>
+	<!-- <i class="material-icons" style="visibility: hidden">person</i> <span style="font-style:italic">главный специалист</span><br/> -->
 
-    {{ site.phone }}<br/>
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
+	<i class="material-icons">phone</i> {{ site.phone }}<br/>
+    <i class="material-icons">mail</i> <a href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
 
     <br/>
 
-	г. Санкт-Петербург<br/>
-	Аптекарский переулок, 4<br/>
+	<i class="material-icons">place</i> Санкт-Петербург, Аптекарский переулок, 4<br/>
 	офис 302<br/>
-	будни, c 9 до 18<br/>
+	<i class="material-icons">access_time</i> будни, c 9 до 18<br/>
 </p>
 
 <div id="contact-map"></div>
