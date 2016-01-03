@@ -333,6 +333,12 @@ article.home {
         // color: white;
         // opacity: 1;
     }
+
+    .slick-active {
+        button:before {
+            font-size: 15px;
+        }
+    }
 }
 
 .captioned-image {
