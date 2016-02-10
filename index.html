@@ -19,7 +19,7 @@ layout: default
     <script>
     $(document).ready(function()
     {
-      $('.slides').slick
+      $('.slides').removeClass('slides-loading').slick
       ({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -41,7 +41,7 @@ layout: default
     })
   </script>
 
-  <div class="slides">
+  <div class="slides slides-loading">
     <div class="slide">
         <div class="image" style='background-image: url("{{ "/images/slides/1.jpg" | prepend: site.baseurl }}")'></div>
         <p><a href="{{ "/projects" | prepend: site.baseurl }}"><em>Проект №1</em></a>. Небоскрёб. Ехал Грека через реку, видит Грека - в реке рак.</p>

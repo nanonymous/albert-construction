@@ -283,8 +283,6 @@ article.home {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-
-        height: 16em;
     }
 
     p {
@@ -339,6 +337,14 @@ article.home {
             // font-size: 16px;
         }
     }
+}
+
+.slides-loading {
+    visibility: hidden;
+}
+
+.slides, .slide .image {
+    height: 16em;
 }
 
 .captioned-image {
