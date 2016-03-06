@@ -1,23 +1,48 @@
 <header class="site-header {% if include.desktop %} site-header-desktop {% endif %}">
 
-  <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+  {% assign root_page_url = "/" | prepend: site.baseurl %}
+
+  {% if include.desktop == true %}
+    <div class="header-top">
+      <div class="header-logo">
+        <a class="page-link" href="{{ root_page_url }}"><img src="{{ "/images/logo.jpg" | prepend: site.baseurl }}" title="{{ site.title }}"/></a>
+      </div>
+
+      <div class="header-right-side">
+        <i class="material-icons">mail</i> <a href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
+        <div class="phone">{{ site.phone }}</div>
+      </div>
+    </div>
+  {% endif %}
 
   <nav class="site-nav">
 
-    <ul>
-      {% if include.desktop != true %}
-        <li><a class="page-link" href="{{ site.baseurl }}"><b>Albert Construction</b></a></li>
-      {% endif %}
-
-      {% assign sorted_pages = site.pages | sort:"order" %}
-      {% for my_page in sorted_pages %}
-        {% if my_page.title %}
-          <li>
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          </li>
+    <div>
+      <ul>
+        {% if include.desktop != true %}
+          <li><a class="page-link" href="{{ site.baseurl }}"><img src="{{ "/images/logo.jpg" | prepend: site.baseurl }}" title="{{ site.title }}"/></a></li>
         {% endif %}
-      {% endfor %}
-    </ul>
+
+        <li class="{% if page.url == "/" %} current {% endif %}">
+          <a class="page-link" href="{{ root_page_url }}">О компании</a>
+        </li>
+
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for my_page in sorted_pages %}
+
+          {% assign current = nil %}
+          {% if page.url == my_page.url %}
+            {% assign current = 'current' %}
+          {% endif %}
+
+          {% if my_page.title %}
+            <li class="{{ current }}">
+              <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </nav>
 
 </header>

@@ -1,35 +1,41 @@
 <footer class="site-footer">
 
-  <h2 class="footer-heading">{{ site.title }}</h2>
+  <div class="site-footer-content">
 
-  <div class="footer-col-wrapper">
-    <div class="footer-col footer-col-1">
-      <ul class="contact-list">
-        <li>{{ site.contact_title }}</li>
-        <li>{{ site.phone }}</li>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      </ul>
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <!-- <li>{{ site.contact_title }}</li> -->
+          <li class="footer-phone">{{ site.phone }}</li>
+          <li class="footer-email">
+            <i class="material-icons">mail</i> <a href="mailto:{{ site.email }}">{{ site.email }}</a><br/>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <!-- <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul> -->
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
     </div>
 
-    <div class="footer-col footer-col-2">
-      <!-- <ul class="social-media-list">
-        {% if site.github_username %}
-        <li>
-          {% include icon-github.html username=site.github_username %}
-        </li>
-        {% endif %}
-
-        {% if site.twitter_username %}
-        <li>
-          {% include icon-twitter.html username=site.twitter_username %}
-        </li>
-        {% endif %}
-      </ul> -->
-    </div>
-
-    <div class="footer-col footer-col-3">
-      <p>{{ site.description }}</p>
-    </div>
   </div>
 
 </footer>

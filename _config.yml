@@ -6,14 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Albert Construction
-contact_title: Альберт Смородников
+title: СтарКом
+contact_title: СтарКом
 email: albert_77@mail.ru
 phone: +7 (921) 943 93 75
 description: > # this means to ignore newlines until "baseurl:"
-  Строительство чего-то там. Дома, пластиковые окна, коттеджи,
-  клубы, многоэтажки. Описание компании здесь.
-  Много строк можно писать.
+  Строительная компания СтарКом. Дома, коттеджи,
+  строительные объекты. Экспертиза и профессионализм. 
+  Более 10 лет на рынке, 20 выполненных проектов различной сложности.
 baseurl: "/albert-construction" # the subpath of your site, e.g. /blog
 url: "http://nanonymous.github.io/albert-construction/" # the base hostname & protocol for your site
 twitter_username: jekyllrb

@@ -40,7 +40,7 @@
       ({
         'panel': document.querySelector('.website-content-wrapper'),
         'menu': document.querySelector('.mobile-menu'),
-        'padding': 196, // это значение должно равняться width у .slideout-menu
+        'padding': 230, // это значение должно равняться width у .slideout-menu
         'tolerance': 70
       })
 
@@ -52,7 +52,7 @@
 
       document.querySelector('.mobile-menu').addEventListener('click', function(event)
       {
-        if (event.target.nodeName === 'A')
+        if (event.target.nodeName === 'A' || event.target.nodeName === 'IMG')
         {
           slideout.close()
         }
