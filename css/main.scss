@@ -48,6 +48,12 @@ $saturated-color: #ffbb00;
     }
 }
 
+@mixin media-query-desktop() {
+    @media screen and (min-width: $on-palm + 1px) {
+        @content;
+    }
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",

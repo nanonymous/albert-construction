@@ -79,6 +79,11 @@
     margin-bottom: 20px;
 
     border: 1px solid black;
+
+    img {
+        // ie10 fix
+        border: none;
+    }
 }
 
 .services ul li label {

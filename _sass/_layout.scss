@@ -158,41 +158,4 @@ article.home {
     // .post-header, .post-title {
     //     margin-bottom: 0.6em;
     // }
-
-    .site-header {
-        .site-nav {
-            padding-top: 0.5em;
-            // padding: 0;
-            // margin-top: 0.5em;
-            // margin-bottom: 0.5em;
-
-            li:first-child {
-                padding-bottom: 0.5em;
-            }
-
-            li.current .page-link {
-                border: none;
-                color: $saturated-color;
-            }
-        }
-
-        .header-top {
-            margin-top: 0.3em;
-            margin-bottom: 0.8em;
-        }
-
-        .header-right-side {
-            display: none;
-        }
-
-        .header-logo {
-            margin-right: 0;
-        }
-    }
-
-    .site-header-desktop {
-        .site-nav {
-            display: none;
-        }
-    }
 }

@@ -10,18 +10,20 @@
     </div>
 
     <main class="website-content-wrapper">
-      {% include header.html desktop=true %}
+      <div class="website-content">
+        {% include header.html desktop=true %}
 
-      <!-- <button class="toggle-button">☰</button> -->
-      <div class="toggle-button slideout-menu-button">
-        <div class="border-menu"></div>
+        <!-- <button class="toggle-button">☰</button> -->
+        <div class="toggle-button slideout-menu-button">
+          <div class="border-menu"></div>
+        </div>
+
+        <div class="page-content">
+          {{ content }}
+        </div>
+
+        {% include footer.html %}
       </div>
-
-      <div class="page-content">
-        {{ content }}
-      </div>
-
-      {% include footer.html %}
     </main>
 
     <!-- slideout mobile menu button -->
