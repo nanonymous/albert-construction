@@ -41,17 +41,29 @@ $saturated-color: #ffbb00;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+
+        "header",
+        "footer",
         "layout",
-        "syntax-highlighting"
+
+        "syntax-highlighting",
+
+        "slideout",
+
+        "slides",
+        "captioned-image",
+        "image-zoom",
+
+        "index-page",
+        "contacts-page"
 ;

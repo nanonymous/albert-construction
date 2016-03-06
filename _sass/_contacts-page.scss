@@ -1,0 +1,25 @@
+#contact-map {
+    margin-top: 1.5em;
+    height: 20em;
+    border: 1px solid #afafaf;
+    background: #efefef;
+}
+
+.contacts {
+    .material-icons {
+        vertical-align: bottom;
+        margin-bottom: 0.15em;
+        // opacity: 0.7;
+        color: #0099CC;
+    }
+}
+
+@include media-query($on-palm) {
+
+    .contacts {
+        .material-icons {
+            margin-bottom: 0.1em;
+            font-size: 1.4em;
+        }
+    }
+}

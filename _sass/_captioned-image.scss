@@ -1,0 +1,52 @@
+.captioned-image {
+    position: relative;
+
+    p {
+        position: absolute;
+        bottom: 0;
+
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+
+        padding-top: 0.5em;
+        padding-bottom: 0.4em;
+
+        padding-left: 0.8em;
+        padding-right: 0.8em;     
+
+        margin: 0;
+
+        width: calc(100% - 2 * 0.8em);
+
+        transition: opacity 200ms ease-out;
+
+        a {
+            color: white;
+        }
+
+        // em {
+        //     font-style: normal;
+        //     font-weight: bold;
+        // }
+    }
+
+    .zoom-img-wrap + p {
+        opacity: 0;
+    }
+}
+
+@include media-query($on-palm) {
+
+    .captioned-image {
+        p {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+
+            font-size: 0.8em;
+
+            width: calc(100% - 1em);
+        }
+    }
+}

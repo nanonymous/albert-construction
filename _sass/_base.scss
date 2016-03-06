@@ -179,8 +179,6 @@ pre {
     }
 }
 
-
-
 /**
  * Icons
  */
@@ -196,4 +194,13 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+a, a:hover, a:visited {
+    color: #0091C2;
+}
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

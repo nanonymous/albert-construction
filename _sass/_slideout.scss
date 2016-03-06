@@ -1,0 +1,152 @@
+
+// https://github.com/Mango/slideout
+
+.slideout-menu-button {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@include media-query($on-palm) {
+
+    .mobile-menu {
+        .site-header {
+            margin: 0;
+        }
+
+        ul {
+            padding-top: 0.6em;
+        }
+
+        li {
+            width: 100%;
+            margin: 0 !important;
+
+            &:active {
+                background-color: #5f5f5f;
+            }
+        }
+
+        a {
+            display: block;
+
+            padding-left: 1.2em;
+            padding-right: 1.2em;
+
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+
+            &:hover, &:active {
+                text-decoration: none;
+            }
+        }
+
+        .site-header {
+            border: 0;
+        }
+    }
+
+    .slideout-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+
+        // // this should be equal to "padding" option in javascript code
+        // width: 170px;
+
+        width: 230px;
+
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        display: none;
+    }
+
+    .slideout-panel {
+        position:relative;
+        z-index: 1;
+        will-change: transform;
+    }
+
+    .slideout-open,
+    .slideout-open body,
+    .slideout-open .slideout-panel {
+        overflow: hidden;
+    }
+
+    .slideout-open .slideout-menu {
+        display: block;
+    }
+
+    .slideout-menu-button {
+        display: inline-block;
+
+        width: 1em;
+        height: 1em;
+
+        padding-left: 0.4em;
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        padding-right: 0.4em;
+    }
+
+    .slideout-open .slideout-menu {
+        display: block !important;
+        background: #3f3f3f;
+        
+        a {
+            color: white;
+        }
+
+        .site-nav {
+            float: none;
+        }
+    }
+
+    .website-content-wrapper {
+        background: white;
+        // box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+
+    .border-menu {
+        position: relative;
+        padding-left: 1.25em;
+    }
+
+    .border-menu:before {
+        content: "";
+        position: absolute;
+        top: 0.25em;
+        left: 0;
+        width: 1em;
+        height: 0.125em;
+        border-top: 0.375em double #000;
+        border-bottom: 0.125em solid #000;
+    }
+
+    .slideout-menu-button {
+        position: absolute;
+        left: 0.5em;
+        top: 0.5em;
+    }
+
+    .toggle-button {
+        margin-left: 0.5em;
+        margin-top: 0.3em;
+    }
+
+    .slideout-menu {
+        ul {
+            li:first-child {
+                a {
+                    background: white;
+                    padding-bottom: 1em;
+                }
+            }
+        }
+    }
+}
